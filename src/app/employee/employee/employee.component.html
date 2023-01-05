@@ -1,0 +1,40 @@
+<!-- <div>
+   <div class="col-6" >
+  <h3>I am employee</h3>
+   </div>
+   <h5>Name is <b>{{objdata.name}}</b> and mark is{{objdata.mark}}</h5>
+</div> -->
+ 
+<!-- <table class="table table-bordered">
+   <thead>
+      <tr>
+       <th>Name</th>
+       <th>Mark</th>
+      </tr>
+   </thead>
+   <tbody *ngFor="let item of listarray">
+   <td>{{item.name}}</td>
+   <td>{{item.mark}}</td>
+   </tbody>
+</table> -->
+
+
+<div class="row">
+   <div class="col-6">
+      <h3>I am Child</h3> 
+   <div class="form group col-lg-5">
+     <label for="name">Name:</label>
+     <input  type="text"  [(ngModel)]="name" class="form-control" id="name" name="Name">
+   </div>
+   <div class="form-group col-lg-5 ">
+     <label for="name">Mark:</label>
+     <input  type="tel" [(ngModel)]="mark"class="form-control" id="name" name="Mark" >
+   </div>
+   <div class="col-lg-5"> 
+     <br>
+       <button class="btn btn-primary" type="submit" (click)="TransferData()">Submit</button>   
+     <br>
+   </div>
+   </div>
+   </div> 
+  

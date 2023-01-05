@@ -1,0 +1,18 @@
+<div>
+   <form [formGroup]="form" (ngSubmit) = "onClickSubmit(form.value)">
+     <input class="input" placeholder="Enter value" formControlName="userInput">
+     <label>
+       <input type="radio" value="Celcius" formControlName="temperature"/>
+         <span>Celcius</span>
+     </label>
+     <label>
+       <input type="radio" value="Fahrenheit" formControlName="temperature">
+         <span>Fahrenheit</span>
+     </label>
+     <br>
+     <input type = "submit" value = "Convert">
+  </form>
+  <p>
+   Output : {{convert}}
+  </p>
+ </div>

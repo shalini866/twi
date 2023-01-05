@@ -1,0 +1,22 @@
+<div class="wrapper">
+   <div class="header-wrapper">
+     <h2 class="header">Users</h2>
+     <p class="title">Add or remove users</p>
+   </div>
+   <div [formGroup]="usersForm">
+     <div formArrayName="users">
+         <div class="input-wrapper" *ngFor="let user of users.controls; let i = index"> 
+         <div [formGroupName]="i">
+         <input class="input" placeholder="FirstName" formControlName="firstName"><br>
+         <input class="input" placeholder="LastName" formControlName="lastName"><br>
+         <input class="input" placeholder="PhoneNumber" formControlName="phoneNumber">
+         <span class="remove" (click)="removeUser(i)">x</span>
+         </div>
+         </div>  
+      </div>
+   </div>
+   <button class="button" (click)="addUser()">+ Add user</button>
+ </div>
+
+
+  
