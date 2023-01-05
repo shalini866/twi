@@ -1,18 +1,22 @@
 <div>
+   <h2>Convert into Temparature</h2>
    <form [formGroup]="form" (ngSubmit) = "onClickSubmit(form.value)">
-     <input class="input" placeholder="Enter value" formControlName="userInput">
+     <input class="input" placeholder="Enter value" formControlName="userInput"><br>
+
      <label>
        <input type="radio" value="Celcius" formControlName="temperature"/>
-         <span>Celcius</span>
+         <span>Celcius</span> 
      </label>
+     <br>
+
      <label>
        <input type="radio" value="Fahrenheit" formControlName="temperature">
-         <span>Fahrenheit</span>
+         <span>Fahrenheit</span> <br>
      </label>
      <br>
      <input type = "submit" value = "Convert">
   </form>
   <p>
-   Output : {{convert}}
+   Output : {{convert }} 
   </p>
  </div>

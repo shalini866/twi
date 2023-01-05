@@ -90,4 +90,31 @@
            (click)="addUser()">
      Add Employee
    </button>
- </div>
+ </div> 
+
+ <hr>
+
+   <div>
+  <h2>Convert into Temparature</h2>
+  <form [formGroup]="form" (ngSubmit) = "onClick(form.value)">
+    <input class="input" placeholder="Enter value" formControlName="userInput"><br>
+
+    <label>
+      <input type="radio" value="Celcius" formControlName="temperature"/>
+        <span>Celcius</span> 
+    </label>
+    <br>
+
+    <label>
+      <input type="radio" value="Fahrenheit" formControlName="temperature">
+        <span>Fahrenheit</span> <br>
+    </label>
+    <br>
+    <input type = "submit" value = "Convert">
+ </form>
+ <p>
+   Output : {{convert | temparature: convertTo:convertFrom}} 
+     <!-- Output : {{convert | temparature : 'C'}}    -->
+
+ </p>
+</div>   

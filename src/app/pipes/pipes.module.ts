@@ -7,7 +7,8 @@ import { SquarePipe } from './square.pipe';
 import { PowerPipe } from './power.pipe';
 import { UserfullnamePipe } from './userfullname.pipe';
 import { SearchPipe } from './search.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemparaturePipe } from './temparature.pipe';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,15 @@ import { FormsModule } from '@angular/forms';
     SquarePipe,
     PowerPipe,
     UserfullnamePipe,
-    SearchPipe
+    SearchPipe,
+    TemparaturePipe
   ],
   imports: [
     CommonModule,
     PipesRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ]
 })
 export class PipesModule { }
